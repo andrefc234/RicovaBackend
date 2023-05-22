@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deals",
+  "info": {
+    "singularName": "deal",
+    "pluralName": "deals",
+    "displayName": "Deal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "meeting": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::meeting.meeting"
+    },
+    "negotations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::negotation.negotation",
+      "mappedBy": "deals"
+    }
+  }
+}

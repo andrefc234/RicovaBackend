@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "negotations",
+  "info": {
+    "singularName": "negotation",
+    "pluralName": "negotations",
+    "displayName": "Negotation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "deals": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::deal.deal",
+      "inversedBy": "negotations"
+    }
+  }
+}
